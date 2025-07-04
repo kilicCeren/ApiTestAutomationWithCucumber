@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
@@ -90,12 +91,37 @@ public class JsonPlaceHolderStepdefinitions {
         request.put("id",70);
 
     }
+
+    @Then("PUT request icin {string},{string},{int} {int} bilgileri ile request body olusturur")
+    public void put_request_icin_bilgileri_ile_request_body_olusturur(String title, String body, Integer inuserIdt1, Integer intid2) {
+        //And PUT request icin "Ahmet","Merhaba",10 70 bilgileri ile request body olusturur
+
+        request = new JSONObject();
+        request.put("title", "Ahmet");
+        request.put("body", "Merhaba");
+        request.put("userId", 10);
+        request.put("id", 70);
+
+    }
+
     @Then("jPH server a POST request gonderir ve testleri yapmak icin response degerini kaydeder")
     public void j_ph_server_a_post_request_gonderir_ve_testleri_yapmak_icin_response_degerini_kaydeder() {
         //And jPH server a POST request gonderir ve testleri yapmak icin response degerini kaydeder
         response =given().contentType(ContentType.JSON)
                 .when().body(request.toString())
                 .post(endpoint);
+
+        // code postla  fail oluyor put ile  yazınca response pass oluyor
+        response.prettyPrint();
+    }
+
+    @And("jPH server a PUT request gonderir ve testleri yapmak icin response degerini kaydeder")
+    public void jphServerAPUTRequestGonderirVeTestleriYapmakIcinResponseDegeriniKaydeder() {
+
+        //And jPH server a PUT request gonderir ve testleri yapmak icin response degerini kaydeder
+        response =given().contentType(ContentType.JSON)
+                .when().body(request.toString())
+                .put(endpoint);
 
         // code postla  fail oluyor put ile  yazınca response pass oluyor
         response.prettyPrint();
@@ -116,9 +142,9 @@ public class JsonPlaceHolderStepdefinitions {
         responseJP=response.jsonPath();
 
         Assert.assertEquals(title,responseJP.getString("title"));
-        Assert.assertEquals(title,responseJP.getString("body"));
-        Assert.assertEquals(title,(Integer)responseJP.getInt("userId"));
-        Assert.assertEquals(title,(Integer)responseJP.getInt("id"));
+        Assert.assertEquals(body,responseJP.getString("body"));
+        Assert.assertEquals(userId,(Integer)responseJP.getInt("userId"));
+        Assert.assertEquals(id,(Integer)responseJP.getInt("id"));
     }
 
 }
