@@ -79,3 +79,45 @@ users.endpoint=/users
 ```
 Bu yapı sayesinde ortam değişiklikleri koddan bağımsız yönetilebilir.
 
+ ## :rocket: Projeyi Çalıştırma
+ ### Ön Gereksinimler
+ -Java JDK 8 veya üzeri
+ -Maven
+ -Git
+ -IntelliJ IDEA veya Eclipse
+ 
+ ### Kurulum ve Çalıştırma
+ Repository'i klonlayın:
+ ```
+ git clone https://github.com/kilicCeren/ApiTestAutomationWithCucumber.git
+ cd ApiTestAutomationWithCucumber
+ ```
+ Testleri çalıştırın:
+ ```
+ mvn clean test
+ ```
+ Belirli tag'e sahip testleri çalıştırmak için:
+ ```
+ mvn clean test -Dcucumber.filter.tags="@smoke"
+ ```
+ ---
+ 
+ ### :bar_chart: Test Sonuçları ve Raporlama
+ 
+ Testler Maven üzerinden çalıştırıldığında, Cucumber'ın varsayılan raporları target/ klasörü altında üretilir.
+ İleri seviye raporlama için Extent veya Allure entegrasyonu yapılabilir.
+ * :heavy_check_mark: Projenin Sağladıkları
+ * :heavy_check_mark: Okunabilir ve sürdürülebilir BDD senaryoları
+ * :heavy_check_mark: API testleri için merkezi yapı
+ * :heavy_check_mark: Kolay çalıştırılabilir Maven altyapısı
+ * :heavy_check_mark: Konfigürasyon dosyası ile esnek ortam yönetimi
+ * :heavy_check_mark: Geliştirilebilir ve genişletilebilir framework yapısı
+   
+ ## :pushpin: Notlar
+ Bu proje yalnızca API test otomasyonu içermektedir.
+ UI testleri kapsam dışındadır.
+ Geliştirilmeye ve yeni senaryolar eklenmeye uygundur.
+ 
+ ## :memo: Lisans
+ Bu proje kişisel eğitim ve portföy amaçlıdır
+
