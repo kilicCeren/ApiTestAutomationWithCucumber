@@ -121,3 +121,52 @@ Bu yapı sayesinde ortam değişiklikleri koddan bağımsız yönetilebilir.
  ## :memo: Lisans
  Bu proje kişisel eğitim ve portföy amaçlıdır
 
+ ---
+ 
+ # 🌐 ApiTestAutomationWithCucumber
+
+This repository is a project developed using the **Java** programming language and contains **REST API test automation** implementations.  
+The project is structured according to the **Behavior Driven Development (BDD)** approach using the **Cucumber** framework, and API tests are performed with the **Rest Assured** library.
+
+The goal is to validate API endpoint behaviors through **readable, maintainable, and automated** test scenarios.
+
+---
+
+## 🎯 Project Purpose
+
+- To automate RESTful API testing  
+- To create **readable Gherkin scenarios** for both business and technical teams  
+- To apply a **BDD-based testing approach** with Cucumber  
+- To build a centralized and organized test infrastructure using Maven  
+- To validate API responses at the status code, body, and header levels  
+
+---
+
+## 🛠️ Technologies and Tools Used
+
+| Technology | Description |
+|----------|-------------|
+| **Java** | Test development language |
+| **Cucumber (BDD)** | Gherkin-based scenario writing |
+| **Rest Assured** | API requests and response validations |
+| **Maven** | Project and dependency management |
+| **JUnit** | Test execution infrastructure |
+
+---
+
+## 📁 Project Structure
+
+```ApiTestAutomationWithCucumber/
+├── .gitignore
+├── pom.xml # Maven dependency and configuration file
+├── configuration.properties # Environment and API configurations
+└── src
+└── test
+├── java
+│ ├── runners # Cucumber test runner classes
+│ ├── stepdefinitions # Java implementations of Gherkin steps
+│ └── utilities # Common utility classes
+└── resources
+└── features # Gherkin (.feature) files
+```
+
