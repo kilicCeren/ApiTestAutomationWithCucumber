@@ -169,4 +169,44 @@ The goal is to validate API endpoint behaviors through **readable, maintainable,
 └── resources
 └── features # Gherkin (.feature) files
 ```
+---
+
+# :test_tube: Test Approach (BDD)
+
+Test scenarios are written using the Gherkin language.
+This allows scenarios to be easily understood by both technical and non-technical stakeholders.
+
+```
+Sample Feature File
+Feature: User API Test
+  Scenario: Get user by id
+    Given API base url is defined
+    When user sends GET request to "/users/1"
+    Then response status code should be 200
+    And response body should contain user data
+```
+
+---
+
+## :mag: Covered Test Scenarios
+
+* Data validation with GET requests
+* Status code validations (200, 400, 404, etc.)
+* Response body content validations
+* Header validations
+*Dynamic endpoint and parameter usage
+* Managing common structures via utility classes
+
+---
+
+## :gear: configuration.properties
+
+This file contains configuration details related to the test environment.
+Example usage:
+
+```
+base.url=https://api.example.com
+users.endpoint=/users
+```
+This structure allows environment changes to be managed independently of the code.
 
