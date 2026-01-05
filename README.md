@@ -210,3 +210,59 @@ users.endpoint=/users
 ```
 This structure allows environment changes to be managed independently of the code.
 
+---
+
+## :rocket: Running the Project
+### Prerequisites
+* Java JDK 8 or higher
+* Maven
+* Git
+* IntelliJ IDEA or Eclipse
+
+### Installation and Execution
+
+Clone the repository:
+
+```
+git clone https://github.com/kilicCeren/ApiTestAutomationWithCucumber.git
+cd ApiTestAutomationWithCucumber
+```
+
+Run the tests:
+```
+mvn clean test
+```
+
+To run tests with a specific tag:
+```
+mvn clean test -Dcucumber.filter.tags="@smoke"
+```
+---
+
+## :bar_chart: Test Results and Reporting
+
+When tests are executed via Maven, Cucumber's default reports are generated under the target/ directory.
+For advanced reporting, Extent or Allure integrations can be added.
+
+##  Project Benefits
+
+* Readable and maintainable BDD scenarios
+* Centralized structure for API testing
+* Easy-to-run Maven infrastructure
+* Flexible environment management via configuration files
+* Extensible and scalable framework structure
+
+---
+
+### :pushpin: Notes
+
+This project includes API test automation only.
+UI testing is out of scope.
+The project is suitable for further development and adding new scenarios.
+
+---
+
+### :memo: License
+
+This project is intended for personal education and portfolio purposes.
+
