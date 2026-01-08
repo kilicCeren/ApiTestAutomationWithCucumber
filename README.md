@@ -90,7 +90,6 @@ Bu yapı sayesinde ortam değişiklikleri koddan bağımsız yönetilebilir.
  Repository'i klonlayın:
  ```
  git clone https://github.com/kilicCeren/ApiTestAutomationWithCucumber.git
- cd ApiTestAutomationWithCucumber
  ```
  Testleri çalıştırın:
  ```
@@ -225,7 +224,6 @@ Clone the repository:
 
 ```
 git clone https://github.com/kilicCeren/ApiTestAutomationWithCucumber.git
-cd ApiTestAutomationWithCucumber
 ```
 
 Run the tests:
